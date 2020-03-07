@@ -1,6 +1,7 @@
 import discord
 import asyncio
 import datetime
+import os
  
 client = discord.Client()
  
@@ -100,5 +101,5 @@ async def on_message(message):
         embed.timestamp = datetime.datetime.utcnow()
 
         await channel.send(embed=embed)
-    
-client.run('Njg1MzQ3MDY0NjM2Mzc1MDc0.XmHYAg.gRkVCNX8m4uS5nrc9MTjpuRspyU') 
+access_token = os.envirun["BOT_TOKEN"]
+client.run(access_token) 
